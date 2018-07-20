@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Account</title>
+    </head>
+    <body>
+        <h1>User Account</h1>
+        <h2>This will display the logged in users account information using handlebars</h2>
+        <ul>
+            <li>First Name: {{first_name}}</li>
+            <li>Last Name: {{last_name}}</li>
+            <li>User Name: {{user_name}}</li>
+            <li>Email: {{email}}</li>
+            <li>Cooking Experience: {{cooking_experience}}</li>
+        </ul>
+        <h2>Recipes contributed</h2>
+        <ul>
+            {{#each}}
+            <li>{{recipe_name}}
+            {{/each}}
+        </ul>
+        <a href="update_account.html">Update Account</a>
+        <a href="index.html">Back to home page</a>
+    </body>
+</html>
