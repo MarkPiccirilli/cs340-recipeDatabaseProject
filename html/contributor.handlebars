@@ -2,13 +2,20 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Search Results</title>
+        <title>Contributor</title>
+        <link rel="stylesheet" href="css/main_stylesheet.css" type="text/css">
     </head>
     <body>
-        <h1>Contributor Page<h1>
-        <h2>This page will be generated in handlebars and show links to other recipes
-            that user has contributed to as well as any cooking Experience they optionally
-            enter on their page.<h2>
-        <a href=index.html>back to home page</a>
+        <h1 class="title">{{user_name}}</h1>
+        <h2>{{first_name}} {{last_name}}</h2>
+        <h3>Cooking Experience:</h3>
+        <p>{{cooking_experience}}</p>
+        <h3>Recipes_Contributed</h3>
+        <ul>
+            {{#each recipe_id}}
+            <li>{{recipe_name}}</li>
+            {{/each}}
+        </ul>
+        <a href=index.html class="link">back to home page</a>
     </body>
 </html>

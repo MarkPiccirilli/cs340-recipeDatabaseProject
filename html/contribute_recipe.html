@@ -2,19 +2,21 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Home</title>
+        <title>Contribute a Recipe!</title>
+        <link rel="stylesheet" href="css/main_stylesheet.css" type="text/css">
     </head>
     <body>
+        <h1 class=title>Contribute A Recipe!</h1>
         <form>
-            Recipe Name:<br>
+            <h3>Recipe Name:</h3>
+            <input type="text">
+            <h3>Intgredients:</h3>
+            <input type="text">
+            <h3>Cookware:</h3>
             <input type="text"><br>
-            Intgredients:<br>
-            <input type="text"><br>
-            Cookware:<br>
-            <input type="text"><br>
-            Instructions:<br>
-            <input type="text"><br>
-            Meal Type:<br>
+            <h3>Instructions:<h3>
+            <input type="text" id="instructions_input"><br>
+            <h3>Meal Type:</h3>
             <select name="meal_type"><br>
                 <option disable selected value> -- select and option -- </option>
                 <option value="dinner">Dinner</option>
@@ -23,7 +25,7 @@
                 <option value="snack">Snack</option>
                 <option value="appitizer">Appitizer</option>
             </select><br>
-            Ethnic Cuisine:<br>
+            <h3>Ethnic Cuisine:</h3>
             <select name="ethnic_cuisine">
                 <option disable selected value> -- select and option -- </option>
                 <option value="chinese">Chinese</option>
@@ -36,7 +38,9 @@
                 <opiton value="indian">Indian</option>
                 <option value="mediterranean">Mediterranean</option>
             </select><br>
+            <br>
             <input type="submit"><a href="thank_you.html">link to thank you page</a>
         </form>
+        <a href="index.html" class="link">Back to home page</a>
     </body>
 </html>

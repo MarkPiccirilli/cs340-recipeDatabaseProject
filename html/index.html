@@ -3,15 +3,16 @@
     <head>
         <meta charset="utf-8">
         <title>Home</title>
+        <link rel="stylesheet" href="css/main_stylesheet.css" type="text/css">
     </head>
     <body>
-        <h1>Recipe Share!<h1>
-        <h2>search<h2>
+        <h1 class="title">Recipe Share!<h1>
+        <h1>search<h1>
         <form>
-            Keyword:<br>
+            <span class="label">Keyword:</span class="label">
             <input type="text" name="keyword"><br>
-            Meal Type:<br>
-            <select name="meal_type"><br>
+            <span class="label">Meal Type:</span class="label">
+            <select name="meal_type">
                 <option disable selected value> -- select and option -- </option>
                 <option value="dinner">Dinner</option>
                 <option value="lunch">Lunch</option>
@@ -19,7 +20,7 @@
                 <option value="snack">Snack</option>
                 <option value="appitizer">Appitizer</option>
             </select><br>
-            Ethnic Cuisine:<br>
+            <span class="label">Ethnic Cuisine:</span class="label">
             <select name="ethnic_cuisine">
                 <option disable selected value> -- select and option -- </option>
                 <option value="chinese">Chinese</option>
@@ -32,16 +33,16 @@
                 <opiton value="indian">Indian</option>
                 <option value="mediterranean">Mediterranean</option>
             </select><br>
-            Low Calorie
+            <span class="label">Low Calorie</span class="label">
             <input type="checkbox" name="low_calorie" value="low_calorie"><br>
-            Low Sodium
+            <span class="label">Low Sodium</span class="label">
             <input type="checkbox" name="low_sodium" value="low_sodium"><br>
-            <input type="submit" value="Search"><a href="search_results.handlebars">link to search results page</a>
+            <input type="submit" value="Search"><a class="link"href="search_results.handlebars">link to search results page</a>
         </form>
         <br>
-        <a href="login.html">Contribute A Recipe!</a>
+        <a href="login.html" class="link">Contribute A Recipe!</a>
         <br>
-        <a href="create_account.html">Create Accout!</a>
-        <a href="account.handlebars">My Account<a>
+        <a href="create_account.html" class="link">Create Accout!</a>
+        <a href="account.handlebars" class="link">My Account<a>
     </body>
 </html>

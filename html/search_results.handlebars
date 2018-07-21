@@ -3,10 +3,15 @@
     <head>
         <meta charset="utf-8">
         <title>Search Results</title>
+        <link rel="stylesheet" href="css/main_stylesheet.css" type="text/css">
     </head>
     <body>
-        <h1>Search Results</h1>
-        <h2>This page will be generated using handlebars<h2>
-        <a href="recipe_display.handlebars">link to recipe_display page</a>
+        <h1 class="title">Search Results</h1>
+        <ul>
+            <li>{{#each recipe_id}}</li>
+            <li>{{recipe_name}}</li>
+        </ul>
+        <a href="recipe_display.handlebars" class="link">link to recipe_display page</a><br>
+        <a href="index.html" class="link">Back To Home Page</a>
     </body>
 </html>

@@ -3,24 +3,24 @@
     <head>
         <meta charset="utf-8">
         <title>Account</title>
+        <link rel="stylesheet" href="css/main_stylesheet.css" type="text/css">
     </head>
     <body>
-        <h1>User Account</h1>
-        <h2>This will display the logged in users account information using handlebars</h2>
+        <h1 class="title">My Account</h1>
         <ul>
-            <li>First Name: {{first_name}}</li>
-            <li>Last Name: {{last_name}}</li>
-            <li>User Name: {{user_name}}</li>
-            <li>Email: {{email}}</li>
-            <li>Cooking Experience: {{cooking_experience}}</li>
+            <li class="account_list">First Name: {{first_name}}</li>
+            <li class="account_list">Last Name: {{last_name}}</li>
+            <li class="account_list">User Name: {{user_name}}</li>
+            <li class="account_list">Email: {{email}}</li>
+            <li class="account_list">Cooking Experience: {{cooking_experience}}</li>
         </ul>
         <h2>Recipes contributed</h2>
         <ul>
-            {{#each}}
-            <li>{{recipe_name}}
+            {{#each recipe_id}}
+            <li class="account_list">{{recipe_name}}
             {{/each}}
         </ul>
-        <a href="update_account.html">Update Account</a>
-        <a href="index.html">Back to home page</a>
+        <a href="update_account.handlebars" class="link">Update Account</a><br>
+        <a href="index.html" class ="link">Back to home page</a>
     </body>
 </html>
