@@ -16,11 +16,13 @@ SELECT id FROM recipes where name=[name];
 SELECT id FROM recipes WHERE meal_type=[meal_type] AND ethnic_cuisine=[ethnic_cuisine];
 
 -- search based on meal_type and/or ethnic_cuisine where low cal is selected
+SELECT id FROM recipes WHERE meal_type=[meal_type] AND ethnic_cuisine=[ethnic_cuisine] AND low_calorie=1;
 
 -- search based on meal_type and/or ethnic_cuisine when low sodium is selected
+SELECT id FROM recipes WHERE meal_type=[meal_type] AND ethnic_cuisine=[ethnic_cuisine] AND low_sodium=1;
 
 -- search based on meal_type and/or ethnic_cuisine when low_sodium and low cal are selected
-
+SELECT id FROM recipes WHERE meal_type=[meal_type] AND ethnic_cuisine=[ethnic_cuisine] AND low_calorie=1 AND low_sodium=1;
 
 -- SEARCH FOR INGREDIENTS AND COOKWARE
 -- search ingredients
@@ -67,8 +69,8 @@ INSERT INTO cookware (name, price) VALUES ([name], [price]);
 
 -- insert a recipe
 -- recipe table (new recipe added by user)
-INSERT INTO recipes (name, instructions, meal_type, ethnic_cuisine, contributor, date_contributed) VALUES
-([name], [instructions], [meal_type], [ethnic_cuisine], [contributor], [date_contributed]);
+INSERT INTO recipes (name, instructions, meal_type, ethnic_cuisine, low_cal, low_sodium, servings, contributor, date_contributed) VALUES
+([name], [instructions], [meal_type], [ethnic_cuisine], [low_cal], [low_sodium], [servings], [contributor], [date_contributed]);
 -- recipe_ingredients table (ingredients for user recipe)
 INSERT INTO recipe_ingredients (recipe_id, ingredient_id) VALUES ([recipe_id], [ingredient_id]);
 -- recipe_cookware table (cookware for user recipe)
