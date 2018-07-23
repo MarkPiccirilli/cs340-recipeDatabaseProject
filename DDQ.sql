@@ -63,6 +63,8 @@ CREATE TABLE `recipes` (
     `instructions` varchar(8000) NOT NULL,
     `meal_type` varchar(255) DEFAULT NULL,
     `ethnic_cuisine` varchar(255) DEFAULT NULL,
+    `low_calorie` int(11) DEFAULT NULL,
+    `low_sodium` int(11) DEFAULT NULL,
     `servings` int(11) NOT NULL,
     `contributor` int(11),
     `date_contributed` date NOT NULL,
@@ -124,7 +126,7 @@ INSERT INTO users (first_name, last_name, user_name, user_password, email, cooki
 INSERT INTO recipes (name, instructions, meal_type, ethnic_cuisine, servings, contributor, date_contributed) VALUES
 ('chili', 'Add ground beef, kidney beans, onion, and tomato sauce to crock pot and cook on low for 6-8 hrs', NULL, NULL, 3, 3, '2001-7-11'),
 ('Krabby Patty', 'Its Mr. Krabs sceret recipe', NULL, NULL, 1, 4, '2006-1-1'),
-('Lemonade', 'cut lemons and sqeeze into glass, add sugar and ice and water, shake', NULL, NULL, 2, 1, '2018-7-18');
+('Lemonade', 'cut lemons and sqeeze into glass, add sugar and ice and water, shake', 'drink', NULL, 2, 1, '2018-7-18');
 
 -- sample ingredients
 INSERT INTO ingredients (name, serving_size, serving_size_unit, calories, fat_g, sodium_mg, sugar_g, protein_g, vitaminA_pdv, vitaminC_pdv) VALUES
