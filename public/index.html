@@ -11,7 +11,10 @@
         <form>
             <span class="label">Keyword:</span class="label">
             <input type="text" name="keyword" id="keyword"><br>
-            <span class="label">Meal Type:</span class="label">
+	    <input type="button" value="Search" onclick="keywordSearch()">
+	</form>
+	<form>
+	    <span class="label">Meal Type:</span class="label">
             <select name="meal_type">
                 <option disable selected value> -- select and option -- </option>
                 <option value="dinner">Dinner</option>
@@ -38,12 +41,14 @@
             <input type="checkbox" name="low_calorie" value="low_calorie"><br>
             <span class="label">Low Sodium</span class="label">
             <input type="checkbox" name="low_sodium" value="low_sodium"><br>
-            <input type="submit" value="Search"><a class="link"href="search_results.handlebars">link to search results page</a>
+            <input type="button" value="Filter" onclick="filter()">
+	    <a class="link"href="search_results.handlebars">link to search results page</a>
         </form>
         <br>
         <a href="login.html" class="link">Contribute A Recipe!</a>
         <br>
         <a href="create_account.html" class="link">Create Accout!</a>
         <a href="account.handlebars" class="link">My Account<a>
+	<script src="keywordSearch.js"></script>
     </body>
 </html>
