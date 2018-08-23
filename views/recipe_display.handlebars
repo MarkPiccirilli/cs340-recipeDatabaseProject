@@ -2,17 +2,24 @@
 <h1 class = "title">{{name}}</h1>
 <h2>Ingredients</h2>
 <ul>
-    {{#each ingredients}}
+    {{#each ../ingredients}}
     <li>{{ingredient_name}}, {{ingredient_quantity}}</li>
     {{/each}}
 </ul>
 
 <h2>Cookware</h2>
-<ul>
-    {{#each cookware_id}}
-    <li>{{cookware_name}}</li>
+<table>
+    <thead>
+	<th>name</th>
+	<th>price</th>
+    </thead>
+    {{#each ../cookware}}
+    <tr>
+	<td>{{cookware_name}}</td>
+	<td>{{cost}}</td>
+    </tr>
     {{/each}}
-</ul>
+</table>
 <h2>Instructions</h2>
 <p>{{instructions}}</p>
 <h2>Contributor: <a href="/contributor/{{user_id}}">{{first_name}} {{last_name}}</a></h2>

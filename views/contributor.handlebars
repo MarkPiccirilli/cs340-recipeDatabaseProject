@@ -5,8 +5,8 @@
 <p>{{cooking_experience}}</p>
 <h3>Recipes_Contributed</h3>
 <ul>
-    {{#each recipesContributed}}
-    <li>{{name}}</li>
+    {{#each ../recipesContributed}}
+    <li><a href="/recipes/{{recipeId}}">{{name}}</a></li>
     {{/each}}
 </ul>
 <a href=../index.html class="link">back to home page</a>

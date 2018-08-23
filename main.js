@@ -14,10 +14,30 @@ app.set('port', process.argv[2]);
 app.set('mysql', mysql);
 app.use('/', require('./search_results.js'));
 app.use('/', require('./recipe_display.js'));
-app.use('/', require('./account.js'));
+app.use('/', require('./contributor.js'));
+//app.use('/', require('./contribute_recipe.js'));
+app.use('/', require('./createAccount.js'));
+app.use('/', require('./myAccount.js'));
 app.use('/', express.static('public'));
 
-
+/*
+    app.post('/', function(req, res) {
+	console.log(req.body);
+	var mysql = req.app.get('mysql');
+	var sql = "INSERT INTO recipes (name, instructions, meal_type, ethnic_cuisine, servings, contributor, date_contributed) VALUES (?, ?, ?, ?, ?, ?, ?)";
+	var inserts = [req.body.name, req.body.instructions, rec.body.meal_type, rec.body.ethnic_cuisine, rec.body.servings, rec.body.contributor, rec.body.date_contributed];
+	sql = mysql.pool.query(sql,inserts,function(error, result, fields) {
+	    if(error) {
+		console.log(JSON.stringify(error));
+		res.write(JSON.stringify(error));
+		res.end();
+	    }
+	    else {
+		res.redirect('/thank_you');
+	    }
+	});
+    });
+*/
 app.use(function(req,res) {
     res.status(404);
     res.render('404');

@@ -28,7 +28,24 @@ module.exports = function() {
 		res.end();
 	    }
 	    context.ingredients = results;
-	    //console.log(JSON.stringify(context));
+	    console.log(JSON.stringify(context));
+	    JSON.stringify(context);
+	    complete();
+	});
+    }
+
+
+    function getRecipeCookwareById(req, res, mysql, context, complete) {
+	var query = "SELECT c.name AS cookware_name, c.cost FROM recipes r INNER JOIN recipe_cookware rc ON rc.recipe_id = r.id INNER JOIN cookware c ON c.id=rc.cookware_id WHERE r.id = ?";
+	console.log(req.params);
+	var inserts = [req.params.id];
+	mysql.pool.query(query, inserts, function(error, results, fields) {
+	    if(error) {
+		res.write(JSON.stringify(error));
+		res.end();
+	    }
+	    context.cookware = results;
+	    console.log(JSON.stringify(context));
 	    JSON.stringify(context);
 	    complete();
 	});
@@ -40,10 +57,10 @@ module.exports = function() {
 	var mysql = req.app.get('mysql');
 	getRecipeInfoById(req, res, mysql, context, complete);
 	getRecipeIngredientsById(req, res, mysql, context, complete);
+	getRecipeCookwareById(req, res, mysql, context, complete);
 	function complete() {
 	    callBackCount++;
-	    if(callBackCount >=2) {
-		console.log("string: ", JSON.stringify(context));
+	    if(callBackCount >=3) {
 		res.render('recipe_display', context)
 	    }
 	}
