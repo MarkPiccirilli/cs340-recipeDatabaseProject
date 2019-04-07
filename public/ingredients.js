@@ -1,5 +1,5 @@
-var appid = 'f4784748';
-var appkey = '3f35f38ba856db1914d4cc3484f80cee';
+var appid = ?;
+var appkey = ?;
 
 
 var count = 0;
